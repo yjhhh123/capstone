@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2B3942</color>
+    <color name="primary_dark">#2B3942</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="lighterprimary">#2B3942</color>
+    <color name="textcolor">@color/primary</color>
+    <color name="splashscreencolor">#1d89e4</color>
+    <color name="colorPrimary">#0d1543</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="tab_background_selected">#2499E0</color>
+    <color name="color">#232F58</color>
+
+    <color name="txt_grey">#4e5457</color>
+
+    <color name="button_color_qr">#232F58</color>
+    <color name="button_color_warning">#B4B5B8</color>
+    <color name="button_color_url">#9CA8D3</color>
+    <color name="button_color_block">#E0E0E0</color>
+
+</resources>

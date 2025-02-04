@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.oneconnect.techblax">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".OneConnect"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:networkSecurityConfig"
+        tools:targetApi="31">
+        <activity
+            android:name=".OneConnectActivities.URL_gotoURLActivity"
+            android:exported="false" />
+        <activity android:name=".OneConnectActivities.SubscriptionsActivity" />
+        <activity android:name=".OneConnectActivities.OneConnectPolicy" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1895176674912401~3090708404" />
+        <meta-data
+            android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="206182569" />
+        <meta-data
+            android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
+            android:value="false" />
+
+        <activity android:name=".OneConnectActivities.OneConnectPolicyDetails" />
+        <activity
+            android:name=".OneConnectActivities.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Splashscreentheme"></activity>
+        <activity
+            android:name=".OneConnectActivities.Servers"
+            android:exported="true"
+            android:parentActivityName=".OneConnectActivities.MainActivity" />
+        <activity android:name=".OneConnectActivities.MainActivity" />
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="top.oneconnectapi.app.DisconnectVPNActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=".DisconnectVPN"
+            android:theme="@style/blinkt.dialog" />
+        <activity
+            android:name=".OneConnectActivities.Start"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OneConnectActivities.URL_PreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".OneConnectActivities.QRactivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneConnectActivities.BlockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneConnectActivities.WarningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneConnectActivities.URL_DetectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneConnectActivities.URL_WhoisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneConnectActivities.URL_SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneConnectActivities.URL_PrewindowActivity"
+            android:exported="false" />
+
+        <service
+            android:name="top.oneconnectapi.app.core.OpenVPNService"
+            android:exported="true"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
